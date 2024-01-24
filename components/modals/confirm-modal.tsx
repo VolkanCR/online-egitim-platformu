@@ -28,15 +28,15 @@ export const ConfirmModal = ({
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+          <AlertDialogTitle>Emin misin?</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone.
+          Bu eylem geri alınamaz.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogCancel>İptal et</AlertDialogCancel>
           <AlertDialogAction onClick={onConfirm}>
-            Continue
+          Devam etmek
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

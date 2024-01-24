@@ -22,7 +22,7 @@ import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
   title: z.string().min(1, {
-    message: "Title is required",
+    message: "Başlık gerekli",
   }),
 });
 
@@ -41,9 +41,9 @@ const CreatePage = () => {
     try {
       const response = await axios.post("/api/courses", values);
       router.push(`/teacher/courses/${response.data.id}`);
-      toast.success("Course created");
+      toast.success("Kurs oluşturuldu");
     } catch {
-      toast.error("Something went wrong");
+      toast.error("Bir şeyler ters gitti");
     }
   }
 
@@ -54,7 +54,7 @@ const CreatePage = () => {
           Name your course
         </h1>
         <p className="text-sm text-slate-600">
-          What would you like to name your course? Don&apos;t worry, you can change this later.
+          Kursunuza ne ad vermek istersiniz? Endişelenmeyin, bunu daha sonra değiştirebilirsiniz.
         </p>
         <Form {...form}>
           <form
@@ -67,17 +67,17 @@ const CreatePage = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    Course title
+                    Kurs başlığı
                   </FormLabel>
                   <FormControl>
                     <Input
                       disabled={isSubmitting}
-                      placeholder="e.g. 'Advanced web development'"
+                      placeholder="Örneğin. 'İleri düzey web geliştirme'"
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
-                    What will you teach in this course?
+                    Bu derste ne öğreteceksiniz?
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
